@@ -6,8 +6,7 @@ import vuetify from './plugins/vuetify'
 import './index.css'
 import toastr from 'toastr'
 import 'toastr/build/toastr.css'
-import VuetifulBoard from 'vuetiful-board'
-import { IconsPlugin } from 'bootstrap-vue'
+// import VuetifulBoard from 'vuetiful-board'
 
 const app = createApp(App);
 
@@ -21,7 +20,6 @@ app.use(router);
 app.use(store);
 app.use(vuetify);
 // app.use(VuetifulBoard);
-app.use(IconsPlugin);
 
 app.mount('#app');
 
