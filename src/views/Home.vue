@@ -1,9 +1,10 @@
 <template>
     <v-app>
         <AppBar></AppBar>
-        <!-- <DrawerSolo></DrawerSolo> -->
+        <DrawerSolo></DrawerSolo>
         <v-main>
-                <router-view></router-view>
+          <confirm-dialog></confirm-dialog>
+          <router-view></router-view>
                 <!-- <AppCustomizer/> -->
         </v-main>
     </v-app>
@@ -12,16 +13,19 @@
 <script>
 import AppBar from '../components/core/AppBar.vue'
 // import AppCustomizer from "../@core/layouts/components/app-customizer/AppCustomizer.vue"
-// import DrawerSolo from '../components/core/DrawerSolo'
+import DrawerSolo from '../components/core/DrawerSolo.vue'
+import VueConfirmDialog from './ConfirmDialog/ConfirmDialog.vue'
+
 export default {
     name: 'HomePage',
     components: {
         AppBar,
-        // DrawerSolo,
+        DrawerSolo,
+        'confirm-dialog': VueConfirmDialog,
     }
 }
 </script>
-<!-- <style lang="scss">
+<style lang="scss">
 .logo-banner {
   width: 40px;
   height: 40px;
@@ -31,4 +35,4 @@ export default {
   margin: 0;
   background-color: var(--background-family1);
 }
-</style> -->
+</style>

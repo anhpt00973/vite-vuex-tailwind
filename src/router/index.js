@@ -6,13 +6,21 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home,
+        component: () => import('/src/views/Home.vue'),
+        children: [
+            // {
+            //     path: '/',
+            //     name: 'Dashboard1',
+            //     component: () => import('../views/DashBoards/dashboard1.vue'),
+            // },
+            {
+                path: '/dashboard1',
+                name: 'Dashboard1',
+                component: () => import('../views/DashBoards/dashboard1.vue'),
+            },
+        ]
     },
-    {
-        path: '/about',
-        name: 'About',
-        component: About,
-    },
+
 ]
 const router = createRouter({
     history: createWebHistory(),
